@@ -11,8 +11,8 @@ Asegúrate de tener instalado Node.js y npm en tu sistema. Puedes descargarlos d
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd evaluation-frontend-telco
+   git clone https://github.com/BryanAriasC/angular-evaluation-frontend-telco.git
+   cd angular-evaluation-frontend-telco
     ```
 
 2. **Instalar dependencias:**
