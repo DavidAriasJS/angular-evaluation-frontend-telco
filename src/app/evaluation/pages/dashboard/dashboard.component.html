@@ -1,0 +1,10 @@
+<div class="dashboard">
+  <div class="dashboard__main">
+    <div echarts [options]="barChartOptions" class="dashboard__chart"></div>
+    <div echarts [options]="lineChartOptions" class="dashboard__chart"></div>
+  </div>
+  <div class="dashboard__side">
+    <div echarts [options]="pieChartOptionsPublished" class="dashboard__chart"></div>
+    <div echarts [options]="pieChartOptionsGender" class="dashboard__chart"></div>
+  </div>
+</div>

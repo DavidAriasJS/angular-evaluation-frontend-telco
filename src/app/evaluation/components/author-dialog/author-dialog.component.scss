@@ -1,0 +1,22 @@
+.new-author-form {
+    .form-field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+  
+      &__label {
+        width: 100px;
+        text-align: right;
+        margin-right: 20px;
+      }
+  
+      &__input {
+        flex: 1;
+      }
+    }
+  
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+  

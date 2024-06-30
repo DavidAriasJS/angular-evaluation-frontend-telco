@@ -1,0 +1,52 @@
+<div class="author-list">
+  <mat-card class="author-list__card">
+    <mat-card-title class="author-list__title">Lista de Autores</mat-card-title>
+    <mat-card-content class="author-list__content">
+      <div class="author-list__toolbar">
+        <div class="author-list__search-container">
+          <label for="search-input" class="author-list__search-label">Buscar:</label>
+          <mat-form-field class="author-list__search-field">
+            <input id="search-input" matInput (keyup)="applyFilter($event)" placeholder="Buscar autor">
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" class="author-list__button" (click)="openDialog()">Nuevo</button>
+      </div>
+      <table mat-table [dataSource]="dataSource" matSort class="book-list__table mat-elevation-z8">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+          <td mat-cell *matCellDef="let author">{{ author.id }}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+          <td mat-cell *matCellDef="let author">{{ author.name }}</td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Acciones</th>
+          <td mat-cell *matCellDef="let author">
+            <button mat-icon-button (click)="editAuthor(author)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="confirmDelete(author.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="accion">
+          <th mat-header-cell *matHeaderCellDef> Acción </th>
+          <td mat-cell *matCellDef="let author">
+            <button mat-icon-button color="accent" (click)="editAuthor(author)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="confirmDelete(author.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [length]="dataSource.data.length" class="book-list__paginator" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+    </mat-card-content>
+  </mat-card>
+</div>
+

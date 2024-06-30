@@ -1,27 +1,48 @@
-# EvaluationFrontendTelco
+# Proyecto Angular - evaluation-frontend-telco
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+Este proyecto es una aplicación frontend desarrollada en Angular, que utiliza servicios simulados a través de `json-server` para pruebas locales.
 
-## Development server
+## Requisitos previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Asegúrate de tener instalado Node.js y npm en tu sistema. Puedes descargarlos desde [nodejs.org](https://nodejs.org/).
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clonar el repositorio:**
 
-## Build
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd evaluation-frontend-telco
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Instalar dependencias:**
+    ```bash
+   npm install
+   ```
 
-## Running unit tests
+## Ejecución del proyecto
+  Para iniciar la aplicación Angular y el servidor JSON simulado, utiliza los siguientes comandos:
+    
+  ```bash
+  npm start
+  ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  Este comando utiliza `concurrently` para ejecutar simultáneamente el servidor de desarrollo de Angular (`ng serve`) y `json-server` con la configuración del archivo `db.json`.
 
-## Running end-to-end tests
+  La aplicación estará disponible en `http://localhost:4200/`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  ## Servicios JSON simulados
+  Este proyecto utiliza `json-server` para simular servicios RESTful en `localhost:3000`.
 
-## Further help
+   ### Servicios disponibles:
+   Books: `http://localhost:3000/books`
+   Authors: `http://localhost:3000/authors`
+   Puedes acceder a estos servicios en tu navegador o realizar peticiones HTTP desde tu aplicación Angular para interactuar con los datos simulados.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Desarrollado
+`David Arias`
+
+## Prueba técnica
+``TELCOM HACOM``

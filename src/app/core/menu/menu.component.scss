@@ -1,0 +1,36 @@
+@import "src/scss/mixins.scss";
+
+.menu {
+  height: 100%;
+
+  &__list {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+    position: relative;
+
+  }
+
+  &.is-active {
+    background: #969696 !important;
+    color: #fff !important;
+  }
+
+  &__text {
+    margin-left: 8px;
+    vertical-align: middle;
+    display: none;
+
+    @include tablet-portrait() {
+      display: initial;
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+}

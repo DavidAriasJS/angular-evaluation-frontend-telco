@@ -1,0 +1,13 @@
+<div class="app">
+    <app-top-header class="app__header"></app-top-header>
+    <mat-drawer-container fullscreen class="app__body" color="primary">
+        <mat-drawer mode="side" opened class="app__sidenav">
+            <app-menu></app-menu>
+        </mat-drawer>
+        <mat-drawer-content class="app__content">
+            <div class="app__page">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

@@ -1,0 +1,60 @@
+<mat-card class="new-book">
+  <mat-card-title class="new-book__title">Nuevo Libro</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="new-book__form">
+      <div class="new-book__form-field">
+        <label for="title" class="new-book__label">Título:</label>
+        <mat-form-field appearance="fill" class="new-book__input">
+          <input matInput id="title" formControlName="title">
+          <mat-error *ngIf="bookForm.controls['title'].hasError('required')">
+            El título es requerido
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="new-book__form-field">
+        <label for="description" class="new-book__label">Descripción:</label>
+        <mat-form-field appearance="fill" class="new-book__input">
+          <textarea matInput id="description" formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="new-book__form-field">
+        <label for="authorId" class="new-book__label">Autor:</label>
+        <mat-form-field appearance="fill" class="new-book__input">
+          <input
+            matInput
+            id="authorId"
+            formControlName="authorId"
+            [matAutocomplete]="auto"
+          >
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayAuthorName">
+            <mat-option *ngFor="let option of filteredAuthors | async" [value]="option">
+              {{ option.name }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="button" (click)="openDialog()">Nuevo Autor</button>
+      </div>
+
+      <div class="new-book__form-field">
+        <mat-checkbox formControlName="published">Publicado</mat-checkbox>
+      </div>
+
+      <div class="new-book__form-field">
+        <label for="year" class="new-book__label">Año:</label>
+        <mat-form-field appearance="fill" class="new-book__input">
+          <input matInput id="year" formControlName="year" type="number">
+          <mat-error *ngIf="bookForm.controls['year'].hasError('required')">
+            El año es requerido
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="new-book__actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!bookForm.valid">Aceptar</button>
+        <button mat-raised-button color="warn" type="button" (click)="onCancel()">Cancelar</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

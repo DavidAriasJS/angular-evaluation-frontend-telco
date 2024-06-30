@@ -1,0 +1,32 @@
+<mat-nav-list class="menu">
+  <a 
+    mat-list-item 
+    class="menu__list"
+    routerLink="./dashboard" 
+    matTooltip="Ir al Dashboard"
+    matTooltipPosition="right"
+    [routerLinkActive]="['is-active']">
+    <mat-icon class="menu__icon">dashboard</mat-icon>
+    <span class="menu__text">Dashboard</span>
+  </a>
+  <a 
+    mat-list-item 
+    class="menu__list"
+    routerLink="./authors" 
+    matTooltip="Ver Autores"
+    matTooltipPosition="right"
+    [routerLinkActive]="['is-active']">
+    <mat-icon class="menu__icon">face</mat-icon>
+    <span class="menu__text">Autores</span>
+  </a>
+  <a 
+    mat-list-item 
+    class="menu__list"
+    routerLink="./books" 
+    matTooltip="Explorar Libros"
+    matTooltipPosition="right"
+    [routerLinkActive]="['is-active']">
+    <mat-icon class="menu__icon">menu_book</mat-icon>
+    <span class="menu__text">Libros</span>
+  </a>
+</mat-nav-list>

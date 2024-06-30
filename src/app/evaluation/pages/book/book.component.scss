@@ -1,0 +1,47 @@
+.new-book {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__form-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__label {
+    flex: 0 0 120px;
+    text-align: right;
+  }
+
+  &__input {
+    flex: 1;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    button {
+      min-width: 100px;
+    }
+  }
+}

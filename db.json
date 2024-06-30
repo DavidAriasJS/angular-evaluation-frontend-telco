@@ -1,0 +1,48 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Book 1",
+      "description": "Description 1",
+      "year": 2020,
+      "authorId": null,
+      "published": true,
+      "registrationDate": "2024-06-29"
+    },
+    {
+      "id": "2",
+      "title": "Book 2",
+      "description": "Description 2",
+      "year": 2021,
+      "authorId": "2",
+      "published": false,
+      "registrationDate": "2021-06-21"
+    },
+    {
+      "id": "ac6e",
+      "title": "CARMELO",
+      "description": "libro IMPORTANTEE",
+      "year": 2017,
+      "authorId": "1",
+      "published": true,
+      "registrationDate": "2024-06-30"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "Author 1",
+      "gender": "female"
+    },
+    {
+      "id": "2",
+      "name": "Author 2",
+      "gender": "male"
+    },
+    {
+      "id": "97d2",
+      "name": "yupi",
+      "gender": "femenino"
+    }
+  ]
+}

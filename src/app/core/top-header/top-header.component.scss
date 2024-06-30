@@ -1,0 +1,52 @@
+@import "src/scss/mixins.scss";
+
+.toolbar {
+    justify-content: space-between;
+    background-color: #424242;
+    height: 60px;
+}
+
+.toolbar__left {
+    display: flex;
+    align-items: center;
+    
+    span{
+        font-size: 1.2rem;
+    }
+    .logo {
+        margin-right: 1rem;
+    }
+}
+
+.toolbar__right {
+    display: flex;
+    align-items: center;
+    .img-user {
+        margin-left: 1rem;
+        cursor: pointer;
+        font-size: 1.8rem;
+    }
+    .img-logout {
+        margin-left: 2rem;
+    }
+}
+
+.toolbar__user {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    p {
+        font-size: 1rem;
+        margin: 0;
+        font-weight:  500;
+    }
+    .rol {
+        font-size: 0.8rem;
+        font-weight: 300;
+        display: none;
+
+        @include tablet-portrait() {
+            display: block;
+        }
+    }
+}

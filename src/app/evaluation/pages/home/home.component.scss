@@ -1,0 +1,38 @@
+@import "src/scss/mixins.scss";
+
+.app {
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__body {
+    &[fullscreen] {
+      display: flex;
+      align-items: flex-start;
+      top: 60px;
+    }
+  }
+
+  &__sidenav {
+    border-right-color: #f6f6f6;
+
+    @include tablet-portrait() {
+      width: 20%;
+      min-width: 140px;
+      max-width: 220px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  &__page {
+    padding-block: 2em;
+  }
+}

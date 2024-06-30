@@ -1,0 +1,41 @@
+.author-list {
+  &__card {
+    margin: 10px;
+    
+    &__title {
+      margin: 20px 0;
+    }
+  }
+  
+  &__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  &__search-container {
+    display: flex;
+    align-items: center;
+    
+    &__label {
+      margin-right: 8px;
+    }
+    
+    &__field {
+      width: 200px;
+    }
+  }
+  
+  &__button {
+    white-space: nowrap;
+  }
+  
+  &__table {
+    width: 100%;
+  }
+  
+  &__paginator {
+    margin-top: 20px;
+  }
+}

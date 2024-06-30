@@ -1,1 +1,81 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/scss/reset.scss";
+@import "src/scss/flex.scss";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica", sans-serif; }
+
+html {
+    font-family: Montserrat-Regular, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.no-pointer-events {
+    pointer-events: none;
+}
+
+.mat-form-field {
+    line-height: 18px;
+}
+
+app-booklist {
+    .mat-paginator-range-label {
+        display: none;
+    }
+    .mat-column-year {
+        text-align: end;
+        .mat-sort-header-container {
+            justify-content: end;
+        }
+    }
+    .mat-column-id,
+    .mat-column-title,
+    .mat-column-description,
+    .mat-column-author {
+        text-align: left;
+    }
+    .mat-column-published .mat-sort-header-container {
+        justify-content: center;
+    }
+    .form-book .form-field__footer .mat-form-field-wrapper {
+        width: 90%;
+        margin: auto;
+    }
+    .mat-card-header-text {
+        display: none;
+    }
+}
+
+app-book {
+    width: 90%;
+    background: #fff;
+    display: flex;
+    margin: 2em auto;
+}
+
+.mat-list-option:hover,
+.mat-list-option:focus,
+.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-list-item:focus,
+.mat-action-list .mat-list-item:hover,
+.mat-action-list .mat-list-item:focus {
+    background: rgba(0,0,0,0.05);
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+    height: 40px !important;
+}
+::ng-deep .mat-mdc-form-field-flex {
+    margin-top: -7px !important;
+}
+
+.mat-mdc-form-field.small {
+    --mat-form-field-container-height: 40px;
+    --mat-form-field-container-vertical-padding: 8px;
+}
